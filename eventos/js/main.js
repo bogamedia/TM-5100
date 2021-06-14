@@ -16,7 +16,8 @@ const app = Vue.createApp({
                 { id: 102, title: 'The Beginner\'s Guide To Investing', 'description': 'One of our most popular and highly requested workshops is back! If you either missed the first \'The Beginner\'s Guide To Investing,\' or just need a refresher, this workshop is for you! For anyone who has been wanting to learn how to invest but hesitating to dive in, this is the interactive workshop for you.', image: './imgs/event02.jpg', available: true, inventory: 200, date: 'Thu, June 3, 2021 4:30 PM – 6:30 PM CST', location: 'Online', cost:20000 },
                 { id: 103, title: 'NFT\'s in Gaming: next level potential?', 'description': 'Find out what NFTs are, why they matter, and how you can participate. Get up to speed on the technology that’s transforming the digital economy, and hear from experts, artists, crypto enthusiasts, and more with our series of webinars. Can NFTs transform the gaming industry as we know it? Gamers are already familiar with concepts like digital unlockables, in-game currency, virtual skins and more—making video games a prime candidate for NFT-related innovations.', image: './imgs/event03.jpg', available: true, inventory: 200, date: 'Tue, May 18, 2021, 6:00 PM UTC', location: 'Online', cost:20000 },
             ],
-            tickets: []
+            tickets: [],
+            clients: []
         }
     },
     methods: {
@@ -64,6 +65,28 @@ const app = Vue.createApp({
                 this.isValidEmail = true;
             } else {
                 this.isValidEmail = false;
+            }
+        },
+        confirm(oForm){
+            this.clients.push({fullName:this.fullName, email:this.email, tickets:this.tickets});
+            console.log(this.clients);
+            this.fullName = "";
+            this.email = "";
+            this.tickets=null;
+            this.cart=0;
+            //this.resetCart();
+            //this.reset(oForm);
+        },reset(oForm){
+            var frm_elements = oForm.elements;
+            for (let i = 0; i < frm_elements.length; i++) {
+                frm_elements[i].value = "";
+            }
+            this.fullName = "";
+            this.email = "";
+        },
+        resetCart(){
+            for (let i = 0; i < cart; i++) {
+                this.removeFromCart(i);
             }
         }
     }

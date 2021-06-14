@@ -113,7 +113,7 @@
             </ul>
           </div>
           <div class="modal-footer">
-            <button v-if="isValidName && isValidEmail" type="button" v-on:click="" class="btn btn-primary mx-auto">Confirm</button>
+            <button v-if="isValidName && isValidEmail" type="button" v-on:click="confirm(this.form)" data-bs-dismiss="modal" class="btn btn-primary mx-auto">Confirm</button>
             <button v-else type="button" class="btn btn-secondary mx-auto" disabled >Confirm</button>
           </div>
         </div>
