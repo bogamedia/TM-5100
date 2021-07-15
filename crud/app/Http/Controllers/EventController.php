@@ -115,13 +115,16 @@ class EventController extends Controller
         $data = $request->all();
         $file = $request->file('image');
 
-        // generate a new filename. getClientOriginalExtension() for the file extension
-        $filename = 'event-photo-' . time() . '.' . $file->getClientOriginalExtension();
-        $data['image'] = $filename;
 
-        // save to storage/app/public/imgs as the new $filename
-        $path = $file->storeAs('public/imgs', $filename);
-        //
+        if (strlen($file) > 0) {
+            // generate a new filename. getClientOriginalExtension() for the file extension
+            $filename = 'event-photo-' . time() . '.' . $file->getClientOriginalExtension();
+            $data['image'] = $filename;
+            // save to storage/app/public/imgs as the new $filename
+            $path = $file->storeAs('public/imgs', $filename);
+        } else {
+            $data['image'] = $data['current_img'];
+        }
 
         $event->update($data);
 

@@ -23,7 +23,7 @@
 </div>
 @endif
 
-<form action="{{ route('events.update',$event->id) }}" method="POST">
+<form action="{{ route('events.update',$event->id) }}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('PUT')
 
@@ -59,11 +59,10 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Image:</strong>
-                @if
-                else
-                @endif
+                
                 <input id="image" type="file" name="image" class="form-control">
-                <img id="preview" src="{{url('/imgs/preview.png')}}" alt="preview image" style="height:250px">
+                <img id="preview" src="{{ asset('storage/imgs/'.$event->image) }}" alt="preview image" style="height:250px">
+                <input type="hidden" name="current_img" value="{{ $event->image }}">
             </div>
         </div>
 
