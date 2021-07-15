@@ -17,8 +17,8 @@ class EventController extends Controller
     {
         //
         $events = Event::latest()->paginate(5);
-    
-        return view('events.index',compact('events'))
+
+        return view('events.index', compact('events'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -46,13 +46,26 @@ class EventController extends Controller
         $request->validate([
             'name' => 'required',
             'detail' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'categories_id' => 'required'
         ]);
-    
-        Event::create($request->all());
-     
+
+        //
+        $data = $request->all();
+        $file = $request->file('image');
+
+        // generate a new filename. getClientOriginalExtension() for the file extension
+        $filename = 'event-photo-' . time() . '.' . $file->getClientOriginalExtension();
+        $data['image'] = $filename;
+
+        // save to storage/app/public/imgs as the new $filename
+        $path = $file->storeAs('public/imgs', $filename);
+        //
+
+        Event::create($data);
+
         return redirect()->route('events.index')
-                        ->with('success','Event created successfully.');
+            ->with('success', 'Event registered');
     }
 
     /**
@@ -64,8 +77,8 @@ class EventController extends Controller
     public function show(Event $event)
     {
         //
-        $categories=Category::find($event->categories_id);
-        return view('events.show',compact('event', 'categories'));
+        $categories = Category::find($event->categories_id);
+        return view('events.show', compact('event', 'categories'));
     }
 
     /**
@@ -78,7 +91,7 @@ class EventController extends Controller
     {
         //
         $categories = Category::all();
-        return view('events.edit',compact('event', 'categories'));
+        return view('events.edit', compact('event', 'categories'));
     }
 
     /**
@@ -94,12 +107,26 @@ class EventController extends Controller
         $request->validate([
             'name' => 'required',
             'detail' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'categories_id' => 'required'
         ]);
-    
-        $event->update($request->all());
-    
+
+        //
+        $data = $request->all();
+        $file = $request->file('image');
+
+        // generate a new filename. getClientOriginalExtension() for the file extension
+        $filename = 'event-photo-' . time() . '.' . $file->getClientOriginalExtension();
+        $data['image'] = $filename;
+
+        // save to storage/app/public/imgs as the new $filename
+        $path = $file->storeAs('public/imgs', $filename);
+        //
+
+        $event->update($data);
+
         return redirect()->route('events.index')
-                        ->with('success','Event updated successfully');
+            ->with('success', 'Event updated successfully');
     }
 
     /**
@@ -112,8 +139,8 @@ class EventController extends Controller
     {
         //
         $event->delete();
-    
+
         return redirect()->route('events.index')
-                        ->with('success','Event deleted successfully');
+            ->with('success', 'Event deleted successfully');
     }
 }
