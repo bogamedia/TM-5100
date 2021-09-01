@@ -1,0 +1,1087 @@
+//VARIABLES
+
+$darkwhite: #EFEFEF;
+$dark-text: #161616;
+$teal: #39D3B5;
+$lightgrey: #353535;
+$darkpurple: #1E0B1D;
+$lightpurple: #4B1B48;
+
+/*
+EXTRA-LIGHT
+font-family: 'Oswald', sans-serif;
+font-weight: 200;
+
+MEDIUM
+font-family: 'Oswald', sans-serif;
+font-weight: 500;
+
+REGULAR
+font-family: 'Quicksand', sans-serif;
+font-weight: 400;
+
+SEMI-BOLD
+font-family: 'Quicksand', sans-serif;
+font-weight: 600;
+*/
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.background-colour {
+    background-color: $darkpurple;
+}
+
+//-----GENERAL BUTTONS------
+.general-btns {
+    color: #fff;
+    //border-color: #fff;
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    border: .2em solid #fff;
+    padding: .3em;
+    text-align: center;
+    border-radius: .2em;
+    width: 100%;
+
+}
+
+.general-btns:hover {
+    border-color: $teal;
+    color: $teal;
+}
+
+.mobile {
+    display: none;
+}
+
+.desktop {
+    display: block;
+}
+
+//------------------------------------MAIN PAGE - PC------------------------------------
+//---------------------MAIN SECTION---------------------
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+//--------------------CAROUSEL--------------------
+.carousel-pics {
+    filter: brightness(80%);
+    height: 700px;
+    object-fit: cover;
+}
+
+//--------------------BARRA DE MENU--------------------
+.top-bar-color {
+    background: $lightpurple;
+}
+
+//-------------TOPBAR-BOOTSTRAP RESET-----------
+.nav-space {
+    padding-left: 2em;
+}
+
+.top-bar {
+    padding: 2em 1.5em;
+}
+
+.top-bar:hover {
+    background-color: $lightpurple;
+}
+
+.top-nav-link {
+    color: #fff !important;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.top-nav-link:hover {
+    color: $teal !important;
+}
+
+.dropdown-box {
+    color: $darkpurple;
+    list-style-image: initial;
+    background-color: $darkpurple;
+    border-color: transparent;
+}
+
+.top-dropdown-item {
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+}
+
+.top-dropdown-item:hover {
+    color: $teal;
+    background: none;
+    border: none;
+    background-color: transparent;
+}
+
+.input-search {
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+    box-shadow: none !important;
+    margin-right: .5em;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+}
+
+.search-btn {
+    color: #fff;
+    background-color: transparent;
+    display: inline-block;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    border: 0.2em solid #fff;
+    padding: 0.3em 1em;
+    border-radius: 0.2em;
+}
+
+.search-btn:hover {
+    border-color: $teal;
+    color: $teal;
+}
+
+//-------------------------------HEADER-------------------------------
+//----------SECTION DIVIDER----------
+.header-section {
+    padding: 10em 15em;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+}
+
+//----------SPAN----------
+.line-header {
+    height: 2px;
+    padding: 0;
+    margin: auto;
+    background: #fff;
+    display: block;
+}
+
+//----------TEXT OF HEADER----------
+.head-text {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 95px;
+    margin: .1em 0;
+}
+
+//-------------------------------SEASONAL EVENT-------------------------------
+//----------SECTION DIVIDER----------
+.season-section {
+    padding: 7em 15em;
+    background: $darkwhite;
+}
+
+//----------TITLE----------
+.season-title {
+    color: $dark-text;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    margin-bottom: .1em;
+}
+
+.line-season {
+    width: 340px;
+    height: 3px;
+    padding: 0;
+    background: $teal;
+    display: block;
+}
+
+//----------SEASON EVENT CARD - BOOTSTRAP CLASS MODIFIER-------------
+.horizontal-card {
+    background-color: transparent;
+    border: none;
+    margin-top: 1em;
+}
+
+.col-height {
+    height: 480px;
+}
+
+.img-col-width {
+    width: 50%;
+}
+
+.img-card-container {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(80%);
+}
+
+.info-event-content {
+    padding: 0 0 0 2em;
+}
+
+.season-event-title {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+
+//----TIMER-----
+.season-time {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    font-size: 17px;
+}
+
+//----HASTAGS-----
+.hastags-container {
+    padding: .7em 0;
+}
+
+.id-hastag {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    padding: .4em;
+    text-align: center;
+    color: #fff;
+    border-radius: 2em;
+    background: $lightgrey;
+    font-size: 17px;
+}
+
+.id-hastag:hover {
+    color: #fff;
+    background: $teal;
+}
+
+//----------INFO----------
+.season-description {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+//-----BUTTON------
+.btn-container {
+    padding-top: 1em;
+    text-align: center;
+}
+
+.btn-season {
+    color: $lightgrey;
+    border-color: $lightgrey;
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    border: .2em solid $lightgrey;
+    padding: .3em;
+    border-radius: .2em;
+    width: 100%;
+}
+
+.btn-season:hover {
+    border-color: $teal;
+    color: $teal;
+}
+
+//-------------------------------GENERAL EVENTS-------------------------------
+//----------SECTION DIVIDER----------
+.event-section {
+    padding: 7em 15em;
+    background: $darkpurple;
+}
+
+//----------TITLE----------
+.event-title {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    margin-bottom: .1em;
+}
+
+.event-line {
+    width: 226px;
+    height: 3px;
+    padding: 0;
+    margin-bottom: 1em;
+    background: $teal;
+    display: block;
+}
+
+//----------IMAGES----------
+.grid-wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-auto-rows: 400px;
+    grid-auto-flow: dense;
+}
+
+.grid-pics {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+    filter: brightness(80%);
+}
+
+.grid-wrapper .grid-pics {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wide {
+    grid-column: span 2;
+}
+
+.large {
+    grid-column: span 3;
+}
+
+//-------------------------------FOOTER-------------------------------
+//----------SECTION DIVIDER----------
+.footer-section {
+    padding: 2em 15em;
+    background: $lightpurple;
+}
+
+.footer {
+    text-align: center;
+}
+
+//----------INFO----------
+.year {
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    margin: 0;
+}
+
+
+
+
+//------------------------------------SPECIFIC EVENT PAGE - PC------------------------------------
+//----------------------EVENT SECTION----------------------
+.spec-img-container {
+    width: 100%;
+}
+
+.specific-event-section {
+    padding: 7em 15em;
+}
+
+.specific-event-title {
+    text-align: center;
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    font-size: 23px;
+}
+
+.specific-info-text {
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    margin-bottom: .5em;
+    font-size: 20px;
+}
+
+
+//-----------------MODALS-----------------
+.modal-appereance {
+    background-image: linear-gradient($lightpurple, $darkpurple);
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+.modal-header,
+.modal-footer {
+    border: none;
+    padding-bottom: 2em;
+}
+
+.modal-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    color: #fff;
+}
+
+.mob-close {
+    position: absolute;
+    right: 1em;
+    color: #fff !important;
+    font-size: 1.7em;
+    background: none;
+    padding: 0;
+    border: 0;
+}
+
+.modal-info {
+    padding-top: 0;
+}
+
+.modals-text {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: .2em;
+}
+
+.modals-subtitles {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    font-size: 16.5px;
+    margin-bottom: .4em;
+}
+
+.modal-checkbox {
+    position: relative;
+    display: block;
+    padding: 0;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+}
+
+.modal-checker {
+    float: right;
+    background: none;
+    border-color: #fff;
+}
+
+.modal-checker:checked {
+    box-shadow: $teal;
+    background-color: $teal;
+    border-color: $teal;
+}
+
+//------MODAL 1------
+.modal-type-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+    color: #fff;
+    margin: 0 12px 1em;
+}
+
+.fields-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+    color: #fff;
+}
+
+.fields-box {
+    grid-row: span 4;
+    border: 1px solid #fff;
+    text-align: center;
+    padding: .7em;
+}
+
+.fields-num {
+    margin: auto;
+    color: #fff;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+}
+
+.grid-wrapper-register {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: 80px;
+    margin-bottom: .7em;
+}
+
+.participants-register {
+    margin-bottom: 1em;
+}
+
+.num-participants-select {
+    border: 1px solid #fff;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    color: #fff;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    border-radius: 0;
+    padding: 0;
+}
+
+.num-participants-select:focus {
+    box-shadow: none;
+    border: 1px solid #fff;
+}
+
+.options-participants {
+    color: $dark-text;
+}
+
+//------MODAL 2------
+.confirm-sub-title {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+
+.input-fields-confirm {
+    border: 1px solid #fff;
+    width: 100%;
+    background-color: transparent;
+    color: #fff;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    margin-bottom: .5em;
+}
+
+//-----------------SCROLL BOX-----------------
+.box-content {
+    position: relative;
+    display: flex;
+    border-radius: .3em;
+    width: auto;
+    height: 15em;
+    padding: 1.5rem;
+    margin-top: 2em;
+    background-color: $lightpurple;
+}
+
+.scroll {
+    overflow-y: auto;
+}
+
+.box-text {
+    color: #fff;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+}
+
+//-----------------SIMILAR EVENTS-----------------
+.similar-events-section {
+    padding: 0 15em 7em;
+}
+
+.similar-event-title {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    margin-bottom: .17em;
+}
+
+.grid-wrapper-spec-event {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: 400px;
+    grid-auto-flow: dense;
+}
+
+.grid-pics-spec-event {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+    filter: brightness(70%);
+}
+
+.grid-wrapper-spec-event .grid-pics-spec-event {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sim-event-imgs {
+    padding: 0 .2em;
+}
+
+.carousel-space {
+    padding-top: .5em;
+}
+
+.car-indicators {
+    position: relative;
+}
+
+.car-left-btn,
+.car-right-btn {
+    width: auto;
+    bottom: 0.5em;
+    font-size: 1.7em;
+}
+
+
+
+//------------------------------------CATEGORY PAGE - PC------------------------------------
+//----------------------CATEGORY SECTION----------------------
+//---------------------CATEGORY POSTS------------------------
+.categories-section {
+    padding: 7em 15em;
+    text-align: center;
+    position: relative;
+}
+
+//--------VER DESPUES-------------
+.card-category {
+    border: none;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 1em;
+    border-radius: 0;
+}
+
+//--------------
+.category-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-col {
+    padding: 2em;
+}
+
+.title-category {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+    color: #fff;
+    font-size: 30px;
+}
+
+.info-category {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+
+
+
+
+
+
+//----------MOBILE------------
+@media screen and (max-width: 480px) {
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    //------------------------------------MAIN PAGE - MOBILE------------------------------------
+
+    .carousel-pics {
+        height: 250px;
+    }
+    //--------------------BARRA DE MENU--------------------
+    //----------MENU HAMBURGUESA-------------
+    .menu-mob {
+        float: right;
+        color: #fff !important;
+        font-size: 1.7em;
+        text-decoration: none;
+        background: none;
+        padding: 0;
+        border: 0;
+    }
+
+    .menu-mob:focus {
+        box-shadow: none;
+    }
+
+    //-------------TOPBAR-BOOTSTRAP RESET-----------
+    .top-nav-collapse {
+        padding-top: 1.5em;
+    }
+
+    .top-bar {
+        padding: 1em 1.5em;
+    }
+
+    .nav-space {
+        padding-left: 0;
+    }
+
+    .search-container {
+        padding-top: .9em;
+    }
+
+    //-------------------------------HEADER-------------------------------
+    //----------SECTION DIVIDER----------
+    .header-section {
+        padding: 3em 1.5em 2em;
+    }
+
+    //----------TEXT OF HEADER----------
+    .head-text {
+        font-size: 22px;
+    }
+
+    //-------------------------------SEASONAL EVENT-------------------------------
+    .col-height {
+        height: auto;
+    }
+
+    //----------SECTION DIVIDER----------
+    .season-section {
+        padding: 2.5em 1.5em;
+    }
+
+    //----------SEASON EVENT CARD - BOOTSTRAP CLASS MODIFIER-------------
+    //----------TITLE----------
+    .season-title {
+        font-size: 20px;
+    }
+
+    .line-season {
+        width: 171px;
+    }
+
+    .img-col-width {
+        width: 100%;
+    }
+
+    .info-event-content {
+        padding: 1em 0 0 0;
+    }
+
+    .season-event-title {
+        font-size: 17px;
+    }
+
+    //----TIMER-----
+    .season-time {
+        font-size: 14px;
+    }
+
+    .season-hastag {
+        font-size: 14px;
+    }
+
+    .season-description {
+        font-size: 16px;
+    }
+
+    //-------------------------------GENERAL EVENTS-------------------------------
+    //----------SECTION DIVIDER----------
+    .event-section {
+        padding: 2.5em 1.5em;
+    }
+
+    //----------TITLE----------
+    .event-title {
+        font-size: 20px;
+    }
+
+    .event-line {
+        width: 113px;
+    }
+
+    //----------IMAGES----------
+    .grid-wrapper {
+        grid-auto-rows: 100px;
+    }
+
+    //-------------------------------FOOTER-------------------------------
+    //----------SECTION DIVIDER----------
+    .footer-section {
+        padding: 1em 1.5em;
+    }
+
+    //------------------------------------SPECIFIC EVENT PAGE - MOBILE------------------------------------
+    //----------------------EVENT SECTION----------------------
+    .specific-event-section {
+        padding: 3em 1.5em;
+    }
+
+    .specific-event-title {
+        font-size: 23px;
+    }
+
+    .basic-info-text {
+        font-size: 16px;
+    }
+
+    //-----------------MODALS-----------------
+    //------MODAL 1------
+
+    .fields-box {
+        grid-row: span 3;
+    }
+
+    .grid-wrapper-register-1 {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-auto-rows: 80px;
+        margin-bottom: .7em;
+    }
+
+    //-----------------SIMILAR EVENTS-----------------
+    .similar-events-section {
+        padding: 0 1.5em 3em;
+    }
+
+    .similar-event-title {
+        font-size: 20px;
+    }
+
+    .grid-wrapper-spec-event {
+        grid-auto-rows: 100px;
+    }
+
+
+
+    //------------------------------------CATEGORY PAGE - MOBILE------------------------------------
+    //---------------------CATEGORY POSTS------------------------
+    //----------SECTION DIVIDER----------
+    .categories-section {
+        padding: 4em 1.5em;
+    }
+
+    //--------------
+    .category-image {
+        width: 170px;
+        height: 100%;
+    }
+
+    .category-col {
+        padding: 1em;
+    }
+
+    .title-category {
+        font-size: 20px;
+    }
+
+    .info-category {
+        margin-bottom: .2em;
+    }
+
+}
+
+
+
+
+
+
+
+//----------TABLET------------
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .top-bar{
+        padding: 2em 5em;
+    }
+
+    //------------------------------------MAIN PAGE - TABLET------------------------------------
+    .carousel-pics {
+        height: 500px;
+    }
+    //--------------------BARRA DE MENU--------------------
+    //----------MENU HAMBURGUESA-------------
+    .menu-mob {
+        float: right;
+        color: #fff !important;
+        font-size: 2em;
+        text-decoration: none;
+        background: none;
+        padding: 0;
+        border: 0;
+    }
+
+    .menu-mob:focus {
+        box-shadow: none;
+    }
+
+    //-------------TOPBAR-BOOTSTRAP RESET-----------
+    .nav-space {
+        padding-left: 0;
+    }
+
+    .search-container {
+        padding-top: .9em;
+    }
+
+    //-------------------------------HEADER-------------------------------
+    //----------SECTION DIVIDER----------
+    .header-section {
+        padding: 7em 5em;
+    }
+
+    //----------TEXT OF HEADER----------
+    .head-text {
+        font-size: 40px;
+    }
+
+    //-------------------------------SEASONAL EVENT-------------------------------
+    .col-height {
+        height: auto;
+    }
+
+    //----------SECTION DIVIDER----------
+    .season-section {
+        padding: 4em 5em;
+    }
+
+    //----------SEASON EVENT CARD - BOOTSTRAP CLASS MODIFIER-------------
+    //----------TITLE----------
+    .season-title {
+        font-size: 30px;
+    }
+
+    .line-season {
+        width: 255px;
+    }
+
+    .season-event-title {
+        font-size: 20px;
+    }
+
+    //----TIMER-----
+    .season-time {
+        font-size: 15px;
+    }
+
+    .season-hastag {
+        font-size: 15px;
+    }
+
+    .season-description {
+        font-size: 17px;
+    }
+
+    //-------------------------------GENERAL EVENTS-------------------------------
+    //----------SECTION DIVIDER----------
+    .event-section {
+        padding: 4em 5em;
+    }
+
+    //----------TITLE----------
+    .event-title {
+        font-size: 30px;
+    }
+
+    .event-line {
+        width: 170px;
+    }
+
+    //----------IMAGES----------
+    .grid-wrapper {
+        grid-auto-rows: 200px;
+    }
+
+    //-------------------------------FOOTER-------------------------------
+    //----------SECTION DIVIDER----------
+    .footer-section {
+        padding: 2em 5em;
+    }
+
+
+
+
+    //------------------------------------SPECIFIC EVENT PAGE - TABLET------------------------------------
+    //----------------------EVENT SECTION----------------------
+    .specific-event-section {
+        padding: 4em 5em;
+    }
+
+    .specific-event-title {
+        font-size: 25px;
+    }
+
+    .basic-info-text {
+        font-size: 18px;
+    }
+
+    //-----------------MODALS-----------------
+    //------MODAL 1------
+
+    .fields-box {
+        grid-row: span 3;
+    }
+
+    .grid-wrapper-register-1 {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-auto-rows: 80px;
+        margin-bottom: .7em;
+    }
+
+    .grid-wrapper-register-2 {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-auto-rows: 30px;
+    }
+
+    //-----------------SIMILAR EVENTS-----------------
+    .similar-events-section {
+        padding: 0 5em 4em;
+    }
+
+    .similar-event-title {
+        font-size: 30px;
+    }
+
+    .grid-wrapper-spec-event {
+        grid-auto-rows: 200px;
+    }
+
+
+
+
+
+    //------------------------------------CATEGORY PAGE - TABLET------------------------------------
+    //---------------------CATEGORY POSTS--------------
+    //----------SECTION DIVIDER----------
+    .categories-section {
+        padding: 4em 5em;
+    }
+
+    //--------------
+    .category-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .category-col {
+        padding: 1em;
+    }
+
+    .title-category {
+        font-size: 20px;
+    }
+
+    .info-category {
+        margin-bottom: .2em;
+    }
+
+}

@@ -1,0 +1,13 @@
+@import "variables";
+@import "media-queries";
+
+//  Body
+
+body {
+  @include text-shadow-sm($body-color);
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  //background-color: $indigo;
+}

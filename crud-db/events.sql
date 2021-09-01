@@ -1,2 +1,0 @@
-INSERT INTO `events` (`id`, `name`, `detail`, `image`, `categories_id`, `created_at`, `updated_at`) VALUES (1, 'Prueba Imagen', 'Prueba imagen', 'event-photo-1626095652.jpg', 1, '2021-07-12 13:14:12', '2021-07-12 13:14:12');
-INSERT INTO `events` (`id`, `name`, `detail`, `image`, `categories_id`, `created_at`, `updated_at`) VALUES (2, 'Prueba Imagen 2', 'Prueba imagen 2', 'event-photo-1626095905.jpg', 2, '2021-07-12 13:18:25', '2021-07-12 13:18:25');
