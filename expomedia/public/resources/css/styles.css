@@ -1,5 +1,0 @@
-@import url(https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap);
-body {
-  background-image: linear-gradient(shade-color(#1a0933, 10%) 0%, #1a0933 7%, #1a0933 80%, shade-color(#173e98, 50%) 100%);
-  text-shadow: 0 0 1px rgba(50, 251, 226, 0.3), 0 0 2px rgba(50, 251, 226, 0.3), 0 0 5px rgba(50, 251, 226, 0.2);
-}
